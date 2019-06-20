@@ -1,0 +1,23 @@
+
+
+<form class="text-center border border-light p-5" [formGroup] = "formdata" (ngSubmit) = "onClickSubmit(formdata.value)">
+
+  <p class="h4 mb-4">Hi {{currentUser.name}}, anounce yourself as teacher</p>
+
+  <!-- Subjects -->
+  <input type="text" id="defaultContactFormSubjects" class="form-control mb-4" placeholder="subjects" formControlName="subjects">
+
+  <!-- Schedule -->
+  <input type="text" id="defaultContactFormSchedule" class="form-control mb-4" placeholder="schedule" formControlName="schedule">
+
+
+  <!-- Message -->
+  <div class="form-group">
+    <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" formControlName="description"></textarea>
+  </div>
+
+
+  <!-- Send button -->
+  <input class="btn btn-info btn-block" type="submit" value="Send">
+
+</form>

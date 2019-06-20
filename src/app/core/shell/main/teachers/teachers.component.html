@@ -1,0 +1,17 @@
+
+
+<div class="jumbotron jumbotron-fluid text-center">
+  <div class="container">
+    <h1 class="display-4">Teachers</h1>
+    <p class="lead">Here you can find all our teachers for any subject. Good Studies!</p>
+    <hr class="my-4">
+  </div>
+</div>
+
+
+
+<div class="card-columns">
+  <div *ngFor="let st of teachers; let i=index">
+    <app-card [person]="st"></app-card>
+  </div>
+</div>

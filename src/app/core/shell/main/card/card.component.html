@@ -1,0 +1,14 @@
+<div class="card m-2" >
+  <!--<img class="card-img-top" src="file:///MyVolume/Users/rafaelmanzano/Library/Application Support/Adobe/Dreamweaver CC 2019/es_ES/Configuration/Temp/Assets/eam6ebaaea4.TMP/images/400X200.gif" alt="Card image cap">-->
+  <div class="card-body">
+    <h5 class="card-title">{{person.name}}</h5>
+    <p class="card-text">{{person.description}}</p>
+    <h6 class='card-text'>Subjects:</h6>
+    <ul>
+      <li>{{person.subjects}}</li>
+    </ul>
+    <h6 class='card-text'>Disponibility:</h6>
+    <p>{{person.schedule}}</p>
+    <a class="btn btn-primary" (click)="onDetailClick(person.id)">Details</a>
+  </div>
+</div>

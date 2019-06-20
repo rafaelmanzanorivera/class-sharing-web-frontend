@@ -1,0 +1,46 @@
+<div class="container">
+
+  <h1>{{teacher.name}}</h1>
+
+
+  <table class="table table-striped">
+    <tbody>
+    <tr>
+      <th scope="row"></th>
+      <td><b>Subjects</b></td>
+      <td>{{teacher.subjects}}</td>
+    </tr>
+    <tr>
+      <th scope="row"></th>
+      <td><b>Mail</b></td>
+      <td>{{teacher.mail}}</td>
+    </tr>
+    <tr>
+      <th scope="row"></th>
+      <td><b>Phone</b></td>
+      <td>{{teacher.phone}}</td>
+    </tr>
+    <tr>
+      <th scope="row"></th>
+      <td><b>Age</b></td>
+      <td>{{teacher.age}}</td>
+    </tr>
+    <tr>
+      <th scope="row"></th>
+      <td><b>Schedule</b></td>
+      <td>{{teacher.schedule}}</td>
+    </tr>
+    <tr>
+      <th scope="row"></th>
+      <td><b>Description</b></td>
+      <td>{{teacher.description}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="currentUser">
+  <div *ngIf="currentUser.mail == teacher.mail">
+    <button class="btn btn-outline-danger my-2 my-sm-0 ml-2" type="submit" (click)="deleteAnnounce(teacher.id_teacher)" >Delete my announce</button>
+  </div>
+</div>

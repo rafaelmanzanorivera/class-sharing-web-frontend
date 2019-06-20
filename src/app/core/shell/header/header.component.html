@@ -1,0 +1,49 @@
+
+
+<nav class="navbar navbar-expand-md navbar-light bg-light ">
+  <a class="navbar-brand" routerLink="init"><img width="80" [src]="logo"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item">
+        <a class="nav-link" href="#" routerLink="teachers">Teachers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" routerLink="students">Students</a>
+      </li>
+
+      <!-- Dropdown -->
+      <li class="nav-item dropdown" [hidden]="!currentUser">
+        <a class="nav-link dropdown-toggle" href="#"  data-toggle="dropdown">
+          Anounce Me
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" routerLink="teacher-form">As teacher</a>
+          <a class="dropdown-item" routerLink="student-form">As student</a>
+        </div>
+      </li>
+
+    </ul>
+
+    <div *ngIf="!currentUser">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" routerLink="login">Login</button>
+      <button class="btn btn-outline-info my-2 my-sm-0 ml-2" type="submit" routerLink="sign-up">Sign up</button>
+    </div>
+
+
+    <div class="nav-item dropdown" *ngIf="currentUser">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrops" data-toggle="dropdown">
+        Logged as {{currentUser.name}}
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" routerLink="teacher-form">Profile</a>
+        <a class="dropdown-item" routerLink="student-form" (click)="logout()">Logout</a>
+      </div>
+    </div>
+
+  </div>
+</nav>
