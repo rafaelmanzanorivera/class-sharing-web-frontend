@@ -1,6 +1,5 @@
-# AngularBasic
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.5.
+# class-sharing-web
+Web platform that allows teachers to offer classes and students to demand them. Frontend in angular and bootstrap.
 
 ## Development server
 
